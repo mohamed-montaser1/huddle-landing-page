@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --inline-margins: 60px;
+}
+
+body {
+  background-image: url(../images/bg-desktop.svg);
+  background-color: var(--violet);
+  background-position: 51px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo-container {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  margin-left: var(--inline-margins);
+}
+
+main {
+  display: flex;
+  padding-inline: var(--inline-margins);
+}
+
+main .right-col {
+  margin-left: 30px;
+}
+
+main h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+main p {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin-block: 20px;
+}
+
+main button {
+  padding: 10px 50px;
+  border-radius: 50px;
+  box-shadow: 0px 1px 6px var(--soft-magenta);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Open sans", sans-serif;
+  color: var(--violet);
+  font-size: 16px;
+}
+
+@media (max-width: 1209px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  main h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  main p {
+    text-align: center;
+    max-width: 100%;
+  }
+  main button {
+    display: block;
+    margin-inline: auto;
+  }
+  main img {
+    max-width: 100%;
+  }
+  main .right-col {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  main h1 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 394px) {
+  :root {
+    --inline-margins: 20px;
+  }
+}
+
+.social-media-container {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.social-media-container svg {
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.social-media-container svg path {
+  fill: white;
+}
+
+@media (max-width: 1209px) {
+  .social-media-container {
+    margin-top: 31px;
+  }
+}
